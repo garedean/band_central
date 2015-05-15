@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: band_central_dev
+
+test:
+  adapter: postgresql
+  database: band_central_test
