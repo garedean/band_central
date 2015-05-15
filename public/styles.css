@@ -1,0 +1,163 @@
+.row > div {
+  margin-bottom: 20px !important;
+}
+
+.lead {
+  margin: 45px 0 20px;
+}
+
+.stretch {
+  width: 100%;
+}
+
+.list-wrapper {
+  margin-top: 20px;
+}
+
+.stack {
+  margin-top: 10px;
+}
+
+.top-left {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+}
+
+td.left {
+  width: 70%;
+}
+
+td.middle {
+  width: 15%;
+}
+
+td.right {
+  width: 15%;
+  text-align: right;
+}
+
+td {
+  height: 50px;
+  vertical-align: middle !important;
+}
+
+.nudge-down {
+  margin-top: 10px;
+}
+
+.bump-down: {
+  margin-top: 20px;
+}
+
+.push-down {
+  margin-top: 30px;
+}
+
+.shove-down {
+  margin-top: 60px;
+}
+
+.table.mega td {
+  font-size: 20px;
+}
+
+.table.mega tr:first-child td:first-child {
+  border-top: none;
+}
+
+.here-link {
+  padding: 5px 30px !important;
+}
+
+/* Button Styling
+/* ==================================== */
+
+.btn.outline {
+  background: none;
+  padding: 5px 0;
+}
+
+/* Primary
+/* ------ */
+
+.btn-primary.outline {
+  border: 2px solid #0099cc;
+  color: #0099cc;
+}
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: #33a6cc;
+  border-color: #33a6cc;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+  border-color: #007299;
+  color: #007299;
+  box-shadow: none;
+}
+
+/* Success
+/* ------ */
+
+.btn-link:focus {
+  outline: none !important;
+}
+
+.btn-success.outline {
+  border: 2px solid #5cb85c;
+  color: #5cb85c;
+}
+
+.btn-success.outline:hover, .btn-success.outline:focus, .btn-success.outline:active, .btn-success.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: #449d44;
+  border-color: #449d44;
+}
+.btn-success.outline:active, .btn-success.outline.active {
+  border-color: #449d44;
+  color: #449d44;
+  box-shadow: none;
+}
+
+/* Danger
+/* ------ */
+
+.btn-danger.outline {
+  border: 2px solid #d9534f;
+  color: #d9534f;
+}
+
+.btn-danger.outline:hover, .btn-danger.outline:focus, .btn-danger.outline:active, .btn-danger.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: #c9302c;
+  border-color: #c9302c;
+}
+.btn-danger.outline:active, .btn-danger.outline.active {
+  border-color: #c9302c;
+  color: #c9302c;
+  box-shadow: none;
+}
+
+/* Media Queries
+/* ==================================== */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .list-wrapper {
+    margin-top: 40px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
