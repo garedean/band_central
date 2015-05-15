@@ -1,0 +1,27 @@
+<h1 class="page-header text-center"><%= @band.name %> Previous Venues</h1>
+
+<div class="row shove-down">
+  <div class="col-sm-8 col-sm-offset-2">
+
+    <% if @previous_venues.empty? %>
+      <div class="text-center">
+        <p class="lead text-center">This band hasn't been assign any previous venues.</p>
+
+        <a href="/bands/<%= @band.id %>/edit" role="button" class="btn btn-primary outline here-link text-center">Assign one.</a>
+      </div>
+
+    <% else %>
+
+      <table class="table mega">
+        <% @previous_venues.each do |venue| %>
+        <tr>
+          <td><%= venue.name %></td>
+        </tr>
+        <% end %>
+      </table>
+
+    <% end %>
+  </div>
+</div>
+
+<a href="/" class="back-link">< back</a>

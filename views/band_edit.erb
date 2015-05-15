@@ -1,0 +1,45 @@
+<h1 class="page-header text-center"><%= @band.name %></h1>
+
+<div class="row shove-down">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h4>Change Band Name:</h4>
+
+    <form action='/bands/<%= @band.id %>' method='post'>
+      <input type='hidden' name='_method' value='patch'>
+      <div class="form-group">
+        <input name='name' type='name' class="form-control" value='<%= @band.name%>' required>
+      </div>
+
+      <% if @venues.empty? %>
+
+        <p class="lead text-center">To assign a venue to this band, you'll need to <a href="/">add one</a> first.</p>
+
+      <% else %>
+
+        <h4 class="push-down">Assign Venues Played At:</h4>
+
+        <div class="horizontal-checkboxes cf">
+          <% @venues.each() do |venue| %>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="checkbox_values[]" value="<%= venue.id %>"
+              <% if @previous_venues.include?(venue.id) %>
+              checked
+              <% end %>
+              >
+              <%= venue.name %>
+            </label>
+          </div>
+          <% end %>
+        </div>
+
+      <% end %>
+
+
+      <button type='submit' class="btn btn-success outline stretch push-down">Update</button>
+    </form>
+
+  </div>
+</div>
+
+<a href="/" class="back-link">< back</a>
