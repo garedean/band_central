@@ -35,6 +35,7 @@ end
 get('/bands/:id') do
   @band            = Band.find(params.fetch('id').to_i)
   @previous_venues = @band.venues
+
   erb(:band)
 end
 
@@ -42,18 +43,21 @@ get('/bands/:id/edit') do
   @band   = Band.find(params.fetch('id').to_i)
   @previous_venues = @band.venue_ids
   @venues = Venue.all
+
   erb(:band_edit)
 end
 
 patch('/bands/:id') do
   checkbox_values = params.fetch('checkbox_values', [])
+  @object = Band.find(params.fetch('id').to_i)
 
-  band = Band.find(params.fetch('id').to_i)
-  band.update(name: params.fetch('name'))
+  @object.venue_ids = checkbox_values
 
-  band.venue_ids = checkbox_values
-
-  redirect back
+  if @object.update(name: params.fetch('name'))
+    redirect back
+  else
+    erb(:errors)
+  end
 end
 
 delete('/bands/:id') do
