@@ -8,14 +8,12 @@ Band Central is a Sinatra app that allows tracks bands and the venues they've pl
 
 Boot up a local Sinatra server (localhost:4567) and navigate to the root directory ('/'). Let the intuitive UI guide you.
 
-#Database Setup, PSQL
+#Rake commands to get app running
 
 ```
-username=# CREATE DATABASE band_central;  
-username=# \c band_central;  
-band_central=# CREATE TABLE bands (id serial PRIMARY KEY, name varchar);  
-band_central=# CREATE TABLE venues (id serial PRIMARY KEY, name varchar);  
-band_central=# CREATE DATABASE band_central_test WITH TEMPLATE band_central; (used for testing)
+rake db:create
+rake db:migrate
+rake db:test:prepare
 ```
 
 #Copyright and license
