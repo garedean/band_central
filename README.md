@@ -2,19 +2,19 @@
 
 Author: Garrett Olson
 
-Band Central is a Sinatra app that allows tracks bands and the venues they've played at.
+Band Central is a Sinatra app that tracks bands and the venues they've played at.
 
 #Setup
 
-Boot up a local Sinatra server (localhost:4567) and navigate to the root directory ('/'). Let the intuitive UI guide you.
-
-#Rake commands to get app running
+Start by running the following Rake commands to set up the database:
 
 ```
 rake db:create
 rake db:migrate
 rake db:test:prepare
 ```
+
+Boot up a local Sinatra server (localhost:4567) and navigate to the root directory ('/'). Let the intuitive UI guide you.
 
 #Copyright and license
 
