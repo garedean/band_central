@@ -1,7 +1,7 @@
 require('bundler/setup')
 require('pry')
 Bundler.require(:default)
-set :erb, :escape_html => true
+# set :erb, :escape_html => true
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 # SHARED
@@ -32,7 +32,7 @@ post('/bands') do
   if @object.save
     redirect to('/')
   else
-    erb(:errors)
+    erubis(:errors)
   end
 end
 
@@ -40,7 +40,7 @@ get('/bands/:id') do
   @band            = Band.find(params.fetch('id').to_i)
   @previous_venues = @band.venues
 
-  erb(:band)
+  erubis(:band)
 end
 
 get('/bands/:id/edit') do
@@ -48,7 +48,7 @@ get('/bands/:id/edit') do
   @previous_venues = @band.venue_ids
   @venues = Venue.all
 
-  erb(:band_edit)
+  erubis(:band_edit)
 end
 
 patch('/bands/:id') do
@@ -60,7 +60,7 @@ patch('/bands/:id') do
   if @object.update(name: params.fetch('name'))
     redirect back
   else
-    erb(:errors)
+    erubis(:errors)
   end
 end
 
@@ -78,6 +78,6 @@ post('/venues') do
   if @object.save
     redirect to('/')
   else
-    erb(:errors)
+    erubis(:errors)
   end
 end
