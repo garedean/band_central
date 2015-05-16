@@ -1,6 +1,10 @@
+production:
+  adapter: postgresql
+  database: band_central_production
+
 development:
   adapter: postgresql
-  database: band_central_dev
+  database: band_central_development
 
 test:
   adapter: postgresql
