@@ -1,4 +1,4 @@
-<h1 class="page-header text-center">Band Central</h1>
+<%= title('Band Central') %>
 
 <div class="row shove-down">
   <div class="col-sm-8 col-sm-offset-2">
@@ -9,7 +9,7 @@
 
         <form action="/bands" method="post">
           <div class="form-group">
-            <input name="band_name" class="form-control" placeholder="Band name">
+            <input name="band_name" class="form-control" placeholder="Band name" required>
           </div>
           <button type="submit" class="btn btn-primary outline stretch">Add Band</button>
         </form>
@@ -20,7 +20,7 @@
             <% @bands.each do |band| %>
             <tr>
               <td class="left">
-                <a href="/bands/<%= band.id %>"><%= band.name %></a>
+                <a href="/bands/<%= band.id %>"><%== band.name %></a>
               </td>
               <td class="middle">
                 <a href="/bands/<%= band.id %>/edit">Edit</a>
@@ -44,7 +44,7 @@
 
         <form action="/venues" method="post">
           <div class="form-group">
-            <input name="venue_name" class="form-control" placeholder="Venue name">
+            <input name="venue_name" class="form-control" placeholder="Venue name" required>
           </div>
           <button type="submit" class="btn btn-primary outline stretch">Add Venue</button>
         </form>

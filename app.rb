@@ -1,7 +1,11 @@
 require('bundler/setup')
 require('pry')
 Bundler.require(:default)
+set :erb, :escape_html => true
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
+
+# SHARED
+# ------------------------------------
 
 get('/reset') do
   Band.delete_all
@@ -13,7 +17,7 @@ end
 get('/') do
   @bands  = Band.all
   @venues = Venue.all
-  erb(:index)
+  erubis(:index)
 end
 
 # BANDS

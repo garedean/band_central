@@ -7,7 +7,7 @@
     <form action='/bands/<%= @band.id %>' method='post'>
       <input type='hidden' name='_method' value='patch'>
       <div class="form-group">
-        <input name='name' type='name' class="form-control" value='<%= @band.name%>'>
+        <input name='name' type='name' class="form-control" value='<%= @band.name%>' required>
       </div>
 
       <% if @venues.empty? %>
